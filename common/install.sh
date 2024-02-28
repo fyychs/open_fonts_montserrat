@@ -17,11 +17,6 @@ open_sans() {
 	FONT_NAME_ITALIC="OpenSans-Italic"
 	FONT_URL_ITALIC=https://github.com/googlefonts/opensans/raw/main/fonts/noto-set/variable/OpenSans-Italic%5Bwdth%2Cwght%5D.ttf
 }
-robot_flex() {
-	FONT_NAME="Roboto-Flex"
-	FONT_URL=https://github.com/googlefonts/roboto-flex/raw/main/fonts/RobotoFlex%5BGRAD%2CXOPQ%2CXTRA%2CYOPQ%2CYTAS%2CYTDE%2CYTFI%2CYTLC%2CYTUC%2Copsz%2Cslnt%2Cwdth%2Cwght%5D.ttf
-	FONT_NAME_ITALIC=""
-}
 montserrat_font() {
 	FONT_NAME="Montserrat"
 	FONT_URL=https://github.com/JulietaUla/Montserrat/blob/master/fonts/ttf/Montserrat-Regular.ttf
@@ -168,14 +163,6 @@ if chooseport 30; then
 		if chooseport 3; then
 			open_sans
 			NEXT_SELECTION=0
-		fi
-	fi
-	if [ "${NEXT_SELECTION}" -eq 1 ]; then
-		ui_print "    -> Roboto-Flex [Vol+ = yes, Vol- = no]"
-		if chooseport 3; then
-			robot_flex
-		else
-			SKIP_INSTALLATION=1
 		fi
 	fi
 	if [ "${NEXT_SELECTION}" -eq 1 ]; then
