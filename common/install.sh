@@ -22,6 +22,12 @@ robot_flex() {
 	FONT_URL=https://github.com/googlefonts/roboto-flex/raw/main/fonts/RobotoFlex%5BGRAD%2CXOPQ%2CXTRA%2CYOPQ%2CYTAS%2CYTDE%2CYTFI%2CYTLC%2CYTUC%2Copsz%2Cslnt%2Cwdth%2Cwght%5D.ttf
 	FONT_NAME_ITALIC=""
 }
+montserrat_font() {
+	FONT_NAME="Ubuntu"
+	FONT_URL=https://github.com/JulietaUla/Montserrat/blob/master/fonts/ttf/Montserrat-Regular.ttf
+	FONT_NAME_ITALIC="Ubuntu-Italic"
+	FONT_URL_ITALIC=https://github.com/JulietaUla/Montserrat/blob/master/fonts/ttf/Montserrat-Italic.ttf
+}
 noto_sans_mono() {
 	FONT_NAME="NotoSansMono"
 	FONT_URL=https://github.com/notofonts/notofonts.github.io/raw/main/fonts/NotoSansMono/unhinted/variable-ttf/NotoSansMono%5Bwdth%2Cwght%5D.ttf
@@ -148,7 +154,7 @@ ui_print "- Do you want to replace system font?"
 ui_print "  [Vol+ = yes, Vol- = no]"
 if chooseport 30; then
 	ui_print "    Choose between:"
-	ui_print "      NotoSans, OpenSans, Roboto-Flex"
+	ui_print "      NotoSans, OpenSans, Roboto-Flex, Montserrat"
 	sleep 3
 	ui_print ""
 	ui_print "    Select:"
@@ -172,7 +178,15 @@ if chooseport 30; then
 			SKIP_INSTALLATION=1
 		fi
 	fi
-
+	if [ "${NEXT_SELECTION}" -eq 1 ]; then
+		ui_print "    -> Montserrat [Vol+ = yes, Vol- = no]"
+		if chooseport 3; then
+			montserrat_font
+		else
+			SKIP_INSTALLATION=1
+		fi
+	fi
+ 
 	if [ "${SKIP_INSTALLATION}" -eq 0 ]; then
 		download_file $FONT_NAME $FONT_URL
 		if [ $API -lt 31 ]; then
@@ -185,7 +199,7 @@ if chooseport 30; then
 		install_font
 
 		ui_print ""
-		ui_print " !! Experimental feature, may not works !!"
+		ui_print " !! Experimental feature, may not work !!"
 		ui_print "    Do you want to replace android clock font?"
 		ui_print "    [Vol+ = yes, Vol- = no]"
 		if chooseport 3; then
