@@ -1,16 +1,4 @@
-# Open Fonts - [XDA Thread](https://forum.xda-developers.com/t/magisk-module-font-open-fonts.4446663/)
-
-![Open Font](https://raw.githubusercontent.com/F3FFO/Open-Fonts/master/img/logo.png)
-
-This module helps you to replace your system fonts though Magisk.
-
-**ATTENTION!** After several attempts I decided to replace only the main Android font: Roboto. This choice is the one I think is more correct as it is left to the user the possibility to choose other fonts without having to uninstall the module.
-
-### About Twemoji
-
-I extracted the font from the arch linux user repository because it is already in the [CBDT](https://learn.microsoft.com/en-us/typography/opentype/spec/cbdt)/[CBLC](https://learn.microsoft.com/en-us/typography/opentype/spec/cblc) standard.
-
-## Compatibility
+Right now, this will brick your phone. I am working on fixing it.
 
 - Android 10+
 - Magisk 20.4+
