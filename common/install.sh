@@ -149,7 +149,7 @@ ui_print "- Do you want to replace system font?"
 ui_print "  [Vol+ = yes, Vol- = no]"
 if chooseport 30; then
 	ui_print "    Choose between:"
-	ui_print "      NotoSans, OpenSans, Roboto-Flex, Montserrat"
+	ui_print "      NotoSans, OpenSans, Montserrat"
 	sleep 3
 	ui_print ""
 	ui_print "    Select:"
