@@ -23,9 +23,9 @@ robot_flex() {
 	FONT_NAME_ITALIC=""
 }
 montserrat_font() {
-	FONT_NAME="Ubuntu"
+	FONT_NAME="Montserrat"
 	FONT_URL=https://github.com/JulietaUla/Montserrat/blob/master/fonts/ttf/Montserrat-Regular.ttf
-	FONT_NAME_ITALIC="Ubuntu-Italic"
+	FONT_NAME_ITALIC="Montserrat-Italic"
 	FONT_URL_ITALIC=https://github.com/JulietaUla/Montserrat/blob/master/fonts/ttf/Montserrat-Italic.ttf
 }
 noto_sans_mono() {
